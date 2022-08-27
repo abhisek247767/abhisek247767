@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
-<h3 align="center">A passionate problem solver from India</h3>
+<h3 align="center">A passionate problem solver,hardworking and team-oriented person from India</h3>
 
 <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge" alt="abhisekroy169" /></a> </p>
 
