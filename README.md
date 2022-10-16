@@ -1,8 +1,7 @@
 <h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
 <h3 align="center">A passionate problem solver,hardworking and team-oriented person from India</h3>
 
-<img align="right" alt="coding" width="400" src="https://user-images.githubusercontent.com/69287212/196018194-4e0000b9-b315-4cdb-90f9-cbd2d4ab6fd5.gif
-">
+<img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif">
 <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="[https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge](https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif)" alt="abhisekroy169" /></a> </p>
 
 - 🔭 I’m currently working on **Face Recognition and Emotion Detection**
