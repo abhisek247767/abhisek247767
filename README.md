@@ -1,6 +1,7 @@
 <h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
 <h3 align="center">A passionate problem solver,hardworking and team-oriented person from India</h3>
-[![@abhisekroy16's Holopin board](https://holopin.me/abhisekroy16)](https://holopin.io/@abhisekroy16)
+
+[[@abhisekroy16's Holopin board](https://holopin.me/abhisekroy16)](https://holopin.io/@abhisekroy16)
 
 <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge" alt="abhisekroy169" /></a> </p>
 
