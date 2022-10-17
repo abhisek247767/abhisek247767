@@ -1,5 +1,6 @@
-![alt text](https://github.com/[abhisek247767]/[abhisek247767]/blob/[branch]/Abhi.gif?raw=true)
 
+
+![Abhi](https://user-images.githubusercontent.com/69287212/196263285-fb6d589e-ffdd-4d16-9258-600bb5ec5a76.gif)
 
 
 <h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
