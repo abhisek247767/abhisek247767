@@ -1,6 +1,7 @@
 
+![Abhisek Roy](https://user-images.githubusercontent.com/69287212/196266752-97430395-831c-4588-abb1-0174c7bd4420.gif)
 
-![Abhi](https://user-images.githubusercontent.com/69287212/196263285-fb6d589e-ffdd-4d16-9258-600bb5ec5a76.gif)
+
 
 
 <h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
