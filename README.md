@@ -11,7 +11,7 @@
 <img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif">
 <!-- <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="[https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge]" alt="abhisekroy169" /></a> </p> -->
 
-- 🔭 I’m currently working on **Satelite Data**
+- 💬 Ask me about **Java & C++**
 
 - 🌱 I’m currently learning **Angular and SpringBoot**
 
