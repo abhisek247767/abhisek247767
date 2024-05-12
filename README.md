@@ -4,8 +4,12 @@
 ![Abhisek Roy](https://github.com/abhisek247767/abhisek247767/assets/69287212/2472a77a-edb6-4b79-b8f0-af7575edda9a)
 
 
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=salesp07.salesp07" />
 
-<h1 align="center">Hi 👋, I'm Abhisek Roy</h1>
+<h2 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abhisek+Roy!;" />
+</h2>
+
 <h3 align="center">A passionate problem solver,hardworking and team-oriented person from India</h3>
 
 <img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif">
@@ -49,11 +53,10 @@
 
 
 <div align="center">
-  <h2>🐍 My Contributions 🐍</h2>
+  <h3>🐍 My Contributions 🐍</h3>
   <br>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/abhisek247767/abhisek247767/output/github-contribution-grid-snake.svg" />
   
-  <br/><br/><br/>
 </div>
 
 
