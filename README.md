@@ -39,7 +39,7 @@
 
 
 <!--<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact" alt="abhisek247767" /></p>-->
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook,HTML,SCSS)
 
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abhisek247767&theme=aura&show_icons=true&locale=en" alt="abhisek247767" /></p>
