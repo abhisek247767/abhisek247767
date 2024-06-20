@@ -21,7 +21,7 @@
 
 - 📫 How to reach me **abhisekroy169@gmail.com**
 
-- 👨‍💻 All of my projects are available at https://abhisek247767.github.io/
+- 👨‍💻 All of my projects are available at [https://abhisek247767.github.io/](https://bento.me/abhisek-roy)
 
 - ⚡ Fun fact I think I am so **friendly !!**
 
