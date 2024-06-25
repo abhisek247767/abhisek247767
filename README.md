@@ -17,7 +17,7 @@
 
 - 💬 Ask me about **Java , SpringMVC , Springboot**
 
-- 🌱 I’m currently learning **Angular and SpringBoot**
+- 🌱 I’m currently exploring **AWS and Microservices**
 
 - 📫 How to reach me **abhisekroy169@gmail.com**
 
