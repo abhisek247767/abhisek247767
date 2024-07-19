@@ -10,7 +10,7 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Abhisek+Roy!;" />
 </h2>
 
-<h3 align="center">A passionate problem solver,hardworking and team-oriented person from India</h3>
+<h3 align="center">A passionate problem solver,hardworking and team-oriented person </h3>
 
 <img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif">
 <!-- <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="[https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge]" alt="abhisekroy169" /></a> </p> -->
