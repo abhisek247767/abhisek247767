@@ -17,7 +17,7 @@
 
 - 💬 Ask me about **Java , SpringMVC , Springboot , NodeJS**
 
-- 🌱 I’m currently exploring **AWS and Microservices**
+- 🌱 I’m currently exploring **Generative AI and Microservices**
 
 - 📫 How to reach me **abhisekroy169@gmail.com**
 
