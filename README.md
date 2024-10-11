@@ -52,7 +52,7 @@
 
 ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abhisek247767&theme=aura) 
 <p align="left">
-  <img src="https://github-contributor-stats.vercel.app/api?username=abhisek247767&layout=compact&limit=5&theme=radical&hide_border=true&combine_all_yearly_contributions=true" alt="abhisek"" />
+  <img src="https://github-contributor-stats.vercel.app/api?username=abhisek247767&layout=compact&limit=5&theme=aura&hide_border=true&combine_all_yearly_contributions=true" alt="abhisek"" />
 </p>
 
 <h2 align="center" >🏆 Github Trophies</h2>
