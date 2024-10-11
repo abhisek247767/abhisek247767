@@ -12,6 +12,7 @@
 
 <h3 align="center">A passionate problem solver,hardworking and team-oriented person </h3>
 
+
 <img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif">
 <!-- <p align="left"> <a href="https://twitter.com/abhisekroy169" target="blank"><img src="[https://img.shields.io/twitter/follow/abhisekroy169?logo=twitter&style=for-the-badge]" alt="abhisekroy169" /></a> </p> -->
 
@@ -85,7 +86,7 @@
     <img src="https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif" width="30" height="30"/>
 </div>
 
-
+<p align="center"><b>I love connecting with different people</b> so if you want to say <b>Hi, I'll be happy to connect you more!</b> <img src="https://user-images.githubusercontent.com/74038190/241763891-7bb1e704-6026-48f9-8435-2f4d40101348.gif" width="40"></p>
 
 <div align="center">
   <h3>🐍 My Contributions 🐍</h3>
