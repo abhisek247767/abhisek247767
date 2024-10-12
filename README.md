@@ -26,7 +26,8 @@
 
 - ⚡ Fun fact I think I am so **friendly !!**
 
-<h3 align="left"><imag src=">🌐Connect with me:</h3>
+<h3 align="left">🌐Connect with me:</h3>
+
 <p align="left">
 <a href="https://twitter.com/abhisekroy169" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="abhisekroy169" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/royabhisek247767/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="royabhisek247767/" height="30" width="40" /></a>
