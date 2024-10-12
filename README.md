@@ -26,7 +26,7 @@
 
 - ⚡ Fun fact I think I am so **friendly !!**
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left"><imag src=">🌐Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/abhisekroy169" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="abhisekroy169" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/royabhisek247767/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="royabhisek247767/" height="30" width="40" /></a>
@@ -35,7 +35,7 @@
 <a href="https://auth.geeksforgeeks.org/user/user/royabhisek" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="user/royabhisek" height="30" width="40" /></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
+<h3 align="left">💻Languages and Tools:</h3>
 
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,redux,yarn,npm,vite,vercel,ts,angular,tailwind,jest,nodejs,express,nginx,java,maven,spring,hibernate,c,cpp,python,postman,jenkins,linux,ubuntu,rabbitmq,mongodb,mysql,github,gitlab,git,elasticsearch,vscode,sublime,postgres,docker,aws,redis&perline=20)](https://skillicons.dev)
