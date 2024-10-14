@@ -26,22 +26,41 @@
 
 - ⚡ Fun fact I think I am so **friendly !!**
 
-<h3 align="left">🌐Connect with me:</h3>
 
-<p align="left">
-<a href="https://twitter.com/abhisekroy169" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="abhisekroy169" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/royabhisek247767/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="royabhisek247767/" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/abhisekroy169" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="abhisekroy169" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/abhisek247767/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="abhisek247767/" height="30" width="40" /></a>
-<a href="https://auth.geeksforgeeks.org/user/user/royabhisek" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="user/royabhisek" height="30" width="40" /></a>
-</p>
+<h2><img src="https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif" width="60">Connect with me:</h2>
+<div id="badges">
+  <a href="https://github.com/abhisek247767">
+    <img src="https://img.shields.io/badge/Github-013243?style=for-the-badge&logo=Github&logoColor=white" alt="Github Badge"/>
+  </a>
+   <a href="https://www.linkedin.com/in/royabhisek247767/">
+    <img src="https://img.shields.io/badge/Linkedin-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin Badge"/>
+
+<a href="https://x.com/abhisekroy169">
+  <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white"
+       alt="X" />
+</a>
+
+<a href="https://linktr.ee/abhisekroy">
+  <img src="https://img.shields.io/badge/linktree-1de9b6?style=for-the-badge&logo=linktree&logoColor=white"
+       alt="Linktree" />
+</a>
+
+
+  </a>
+   <a href="https://abhisek247767.github.io/AbhisekRoy-SDE/">
+    <img src="https://img.shields.io/badge/Profile-B7472A?style=for-the-badge&logo=Profile&logoColor=white" alt="Profile Badge"/>
+  </a>
+  
+</div>
+
+
 
 <h3 align="left">💻Languages and Tools:</h3>
 
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,redux,yarn,npm,vite,vercel,ts,angular,tailwind,jest,nodejs,express,nginx,java,maven,spring,hibernate,c,cpp,python,postman,jenkins,linux,ubuntu,rabbitmq,mongodb,mysql,github,gitlab,git,elasticsearch,vscode,sublime,postgres,docker,aws,redis&perline=20)](https://skillicons.dev)
- <details>
-   <summary><h2><img src="https://media4.giphy.com/media/MIGbtLZoVjbl0bYbAd/giphy.gif?cid=ecf05e472t2h0i8d7dcjaoau9iqtchhr899hxmpxzzgc7lyw&rid=giphy.gif" width="30">Github Stats:</h2></summary>
+
+<h2><img src="https://media4.giphy.com/media/MIGbtLZoVjbl0bYbAd/giphy.gif?cid=ecf05e472t2h0i8d7dcjaoau9iqtchhr899hxmpxzzgc7lyw&rid=giphy.gif" width="30">Github Stats:</h2>
 
 <!--<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact" alt="abhisek247767" /></p>-->
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook,HTML,SCSS)
@@ -57,7 +76,7 @@
 <p align="left">
   <img src="https://github-contributor-stats.vercel.app/api?username=abhisek247767&layout=compact&limit=5&theme=aura&hide_border=true&combine_all_yearly_contributions=true" alt="abhisek"" />
 </p>
-</details>
+
 
 
 
