@@ -55,7 +55,7 @@
 
 
 
-<h3 align="left">💻Languages and Tools:</h3>
+<h3 align="left"><img align='left' src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="30" align="center">Languages and Tools:</h3>
 
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,redux,yarn,npm,vite,vercel,ts,angular,tailwind,jest,nodejs,express,nginx,java,maven,spring,hibernate,c,cpp,python,postman,jenkins,linux,ubuntu,rabbitmq,mongodb,mysql,github,gitlab,git,elasticsearch,vscode,sublime,postgres,docker,aws,redis&perline=20)](https://skillicons.dev)
