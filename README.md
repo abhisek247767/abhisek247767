@@ -1,7 +1,8 @@
 
 <!-- ![Abhisek Roy](https://user-images.githubusercontent.com/69287212/196266752-97430395-831c-4588-abb1-0174c7bd4420.gif) -->
 
-![Abhisek Roy](https://github.com/abhisek247767/abhisek247767/assets/69287212/2472a77a-edb6-4b79-b8f0-af7575edda9a)
+![Abhisek Roy](https://github.com/user-attachments/assets/3bf2adf8-ea4f-4d9c-a6db-b01a1da41855)
+
 
 
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=salesp07.salesp07" />
