@@ -86,7 +86,7 @@
 
 
 <details>	
-    <summary><h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="30" align=center /> Get My Code Stats👨🏻‍💻(Click to open)</h2></summary><br>
+    <summary><h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="30" align=center /> Get My Code Stats👨🏻‍💻</h2>(Click to open)</summary><br>
 <!--START_SECTION:waka-->
 
 
@@ -98,7 +98,7 @@
 🌃 Evening                869 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.94 % 
 🌙 Night                  493 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.61 % 
 ```
-📅 **I'm Most Productive on Wednesday** 
+📅 **I'm Most Productive on Tuesday** 
 
 ```text
 Monday                   90 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.62 % 
