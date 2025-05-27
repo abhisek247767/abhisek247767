@@ -1,12 +1,8 @@
-const { writeFileSync, readFileSync } = require("fs");
+const { writeFileSync, readFileSync, existsSync } = require("fs");
 
 function calculateDays(birthday) {
   const today = new Date();
-  const nextBirthday = new Date(
-    today.getFullYear(),
-    birthday.getMonth(),
-    birthday.getDate()
-  );
+  const nextBirthday = new Date(today.getFullYear(), birthday.getMonth(), birthday.getDate());
 
   if (today > nextBirthday) {
     nextBirthday.setFullYear(today.getFullYear() + 1);
@@ -14,15 +10,18 @@ function calculateDays(birthday) {
 
   const diff = nextBirthday.getTime() - today.getTime();
   const daysLeft = Math.floor(diff / (1000 * 3600 * 24));
-  let message;
 
-  if (daysLeft > 0) {
-    message = `### ${daysLeft} days left until Abhisek Roy's birthday!`;
-  } else {
-    message = `## Today's Abhisek Roy's Birthday!✨🥳🥳`;
-  }
+  let message = daysLeft > 0
+    ? `### ${daysLeft} days left until Abhisek Roy's birthday!`
+    : `## Today's Abhisek Roy's Birthday!✨🥳🥳`;
 
   const readmePath = "README.md";
+
+  if (!existsSync(readmePath)) {
+    console.error("README.md not found");
+    process.exit(1);
+  }
+
   const readmeContent = readFileSync(readmePath, "utf-8");
   const markerStart = "<!-- BIRTHDAY_MESSAGE_START -->";
   const markerEnd = "<!-- BIRTHDAY_MESSAGE_END -->";
@@ -33,13 +32,12 @@ function calculateDays(birthday) {
     : `${readmeContent}\n\n${newContent}`;
 
   writeFileSync(readmePath, updatedContent);
-
-  return "Done";
+  console.log("README.md updated.");
 }
 
 try {
-  console.log(calculateDays(new Date(2002, 1, 22))); 
-} catch (error) {
-  console.error(error);
+  calculateDays(new Date(2002, 1, 22)); // February 22
+} catch (err) {
+  console.error("Error:", err);
   process.exit(1);
 }
