@@ -19,11 +19,11 @@ function calculateDays({ birthday }: { birthday: Date }): string {
   let message: string;
 
 if (daysLeft > 1) {
-  message = `<h3 align="center">🎉 Only <strong>${daysLeft} days</strong> left until <em>Abhisek </em>'s Birthday! 🎂</h3>`;
+  message = `<h3 align="center">🎉 Only <strong>${daysLeft} days</strong> left until <em>Abhisek </em>'s birthday! 🎂</h3>`;
 } else if (daysLeft === 1) {
-  message = `<h3 align="center">⏳ Just <strong>1 day</strong> left until <em>Abhisek </em>'s Birthday! 🥳</h3>`;
+  message = `<h3 align="center">⏳ Just <strong>1 day</strong> left until <em>Abhisek </em>'s birthday! 🥳</h3>`;
 } else {
-  message = `<h3 align="center">🎊 <strong>Today is Abhisek Roy's Birthday!</strong> ✨🎉 Wish him well! 🥳</h3>`;
+  message = `<h3 align="center">🎊 <strong>Today is Abhisek Roy's nirthday!</strong> ✨🎉 Wish him well! 🥳</h3>`;
 }
 
   const readmePath = "README.md";

@@ -1,12 +1,13 @@
 {
   "name": "abhisek247767",
- "module": "index.ts",
+  "module": "index.ts",
   "type": "module",
   "scripts": {
     "dev": "bun index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^22.15.21"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
