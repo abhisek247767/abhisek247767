@@ -2,7 +2,8 @@ name: Daily Readme Update
 
 on:
   schedule:
-    - cron: "30 18 * * *"
+    - cron: "30 18 * * *" # Runs every day at 6:30 PM UTC (12:00 AM IST)
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -17,9 +18,9 @@ jobs:
 
       - name: Calculate Days left
         run: |
-          bun run dev
+          bun run index.js
           git config --global user.email "abhisekroy169@gmail.com"
           git config --global user.name "abhisek247767"
           git add README.md
-          git commit -m "Updated README on $(TZ=Asia/Kolkata date +'%Y-%m-%d %H:%M')"
+          git commit -m "Updated README on $(TZ=Asia/Kolkata date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
           git push origin main
