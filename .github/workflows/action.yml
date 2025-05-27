@@ -1,8 +1,11 @@
 name: Daily Readme Update
 
 on:
+  push:
+    branches: [main]
+  workflow_dispatch:
   schedule:
-    - cron: "30 18 * * *" # Runs every day at 6:30 PM UTC (12:00 AM IST)
+    - cron: "30 18 * * *"
 
 jobs:
   update-readme:
