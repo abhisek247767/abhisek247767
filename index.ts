@@ -18,11 +18,13 @@ function calculateDays({ birthday }: { birthday: Date }): string {
 
   let message: string;
 
-  if (daysLeft > 0) {
-    message = `### ${daysLeft} days left until Abhisek Roy's birthday!`;
-  } else {
-    message = `## Today's Abhisek Roy's Birthday! ✨🥳🥳`;
-  }
+if (daysLeft > 1) {
+  message = `<h3 align="center">🎉 Only <strong>${daysLeft} days</strong> left until <em>Abhisek </em>'s Birthday! 🎂</h3>`;
+} else if (daysLeft === 1) {
+  message = `<h3 align="center">⏳ Just <strong>1 day</strong> left until <em>Abhisek </em>'s Birthday! 🥳</h3>`;
+} else {
+  message = `<h3 align="center">🎊 <strong>Today is Abhisek Roy's Birthday!</strong> ✨🎉 Wish him well! 🥳</h3>`;
+}
 
   const readmePath = "README.md";
 
