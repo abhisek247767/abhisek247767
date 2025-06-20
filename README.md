@@ -190,7 +190,7 @@ ASP.NET                  1 repo              █░░░░░░░░░░�
 </div>
 
 <!-- BIRTHDAY_MESSAGE_START -->
-<h3 align="center">🎉 Only <strong>247 days</strong> left until <em>Abhisek </em>'s birthday! 🎂</h3>
+<h3 align="center">🎉 Only <strong>246 days</strong> left until <em>Abhisek </em>'s birthday! 🎂</h3>
 <!-- BIRTHDAY_MESSAGE_END -->
 
 
