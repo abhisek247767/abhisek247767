@@ -152,7 +152,7 @@ ASP.NET                  1 repo              █░░░░░░░░░░�
 
 <h2 align="center" >🏆 Github Trophies</h2>
 
- <p align="left"> <a href="https://gh-trophy.cdnsoft.net"><img src="https://gh-trophy.cdnsoft.net/?username=abhisek247767&theme=discord" alt="abhisek247767" /></a></p>
+ <p align="left"> <a href="https://gh-trophy.cdnsoft.net"><img src="https://gh-trophy.cdnsoft.net/?username=abhisek247767&theme=discord&title=Stars,Followers,Repositories,Issues,Commits,PullRequests,Reviews,MultiLanguage,Experience" alt="abhisek247767" /></a></p>
 
 
  <div align="center">
