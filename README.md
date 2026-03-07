@@ -152,7 +152,7 @@ ASP.NET                  1 repo              █░░░░░░░░░░�
 
 <h2 align="center" >🏆 Github Trophies</h2>
 
- <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhisek247767&theme=radical" alt="abhisek247767" /></a></p>
+ <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhisek247767&theme=juicyfresh" alt="abhisek247767" /></a></p>
 
 
  <div align="center">
