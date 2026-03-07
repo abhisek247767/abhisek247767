@@ -62,19 +62,19 @@
 
 <h2><img src="https://media4.giphy.com/media/MIGbtLZoVjbl0bYbAd/giphy.gif?cid=ecf05e472t2h0i8d7dcjaoau9iqtchhr899hxmpxzzgc7lyw&rid=giphy.gif" width="30">    Github Stats:</h2>
 
-<!--<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact" alt="abhisek247767" /></p>-->
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook,HTML,SCSS)
+<!--<p><img align="left" src="https://github-stats-extended.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact" alt="abhisek247767" /></p>-->
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs?username=abhisek247767&theme=aura&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook,HTML,SCSS)
 
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abhisek247767&theme=aura&show_icons=true&locale=en" alt="abhisek247767"/></p>
+<p>&nbsp;<img align="center" src="https://github-stats-extended.vercel.app/api?username=abhisek247767&theme=aura&show_icons=true&locale=en" alt="abhisek247767"/></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abhisek247767&&theme=tokyonight" alt="abhisek247767"/></p>
 
 
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=abhisek247767&theme=aura) 
+![](https://github-stats-extended.vercel.app/api/cards/profile-details?username=abhisek247767&theme=aura) 
 <p align="left">
-  <img src="https://github-contributor-stats.vercel.app/api?username=abhisek247767&layout=compact&limit=5&theme=aura&hide_border=true&combine_all_yearly_contributions=true" alt="abhisek"" />
+  <img src=https://github-stats-extended.vercel.app/api?username=abhisek247767&layout=compact&limit=5&theme=aura&hide_border=true&combine_all_yearly_contributions=true" alt="abhisek"" />
 </p>
 
 
