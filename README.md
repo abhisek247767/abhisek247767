@@ -193,7 +193,7 @@ ASP.NET                  1 repo              █░░░░░░░░░░�
 </div>
 
 <!-- BIRTHDAY_MESSAGE_START -->
-<h3 align="center">🎉 Only <strong>224 days</strong> left until <em>Abhisek </em>'s birthday! 🎂</h3>
+<h3 align="center"><img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/9037a869-528d-44e2-acaa-288c260ec742" width="50px" alt="Party"/> Only <strong>224 days</strong> left until <em>Abhisek </em>'s birthday! 🎂</h3>
 <!-- BIRTHDAY_MESSAGE_END -->
 
 
