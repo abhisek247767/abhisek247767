@@ -183,8 +183,11 @@ ASP.NET                  1 repo              █░░░░░░░░░░�
 <p align="center"><b>I love connecting with different people</b> so if you want to say <b>Hi, I'll be happy to connect you more!</b> <img src="https://user-images.githubusercontent.com/74038190/241763891-7bb1e704-6026-48f9-8435-2f4d40101348.gif" width="40"></p>
 
 <div align="center">
-  <h3>🐍 My Contributions 🐍</h3>
-  <br>
+  <h3>
+    <picture><img src="https://user-images.githubusercontent.com/74038190/206662607-d9e7591e-bbf9-42f9-9386-29efc927bc16.gif" width="20px"/></picture>
+    My Contributions
+    <picture><img src="https://user-images.githubusercontent.com/74038190/206662607-d9e7591e-bbf9-42f9-9386-29efc927bc16.gif" width="20px"/></picture>
+  </h3>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/abhisek247767/abhisek247767/output/github-contribution-grid-snake.svg" />
   
 </div>
