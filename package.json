@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun index.ts"
+    "dev": "bun index.ts",
+    "image:create": "bun run profile-card/generate.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -11,5 +12,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.35.3"
   }
 }

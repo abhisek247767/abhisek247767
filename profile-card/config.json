@@ -1,0 +1,19 @@
+{
+  "githubUsername": "abhisek247767",
+  "promptUser": "abhisek",
+  "promptHost": "dev",
+  "asciiArt": [],
+  "systemInfo": [
+    { "label": "Role", "value": "Full-Stack Software Developer" },
+    { "label": "Languages.Programming", "value": "Java, TypeScript, JavaScript, Python" },
+    { "label": "Frameworks", "value": "Spring Boot, Node.js, React, Angular" },
+    { "label": "Exploring", "value": "Generative AI, Microservices" },
+    { "label": "Fun Fact", "value": "So friendly!!" }
+  ],
+  "contact": {
+    "email": "abhisekroy169@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/royabhisek247767/",
+    "twitter": "https://x.com/abhisekroy169",
+    "website": "https://abhisek247767.github.io/AbhisekRoy-SDE/"
+  }
+}
