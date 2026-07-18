@@ -1,19 +1,56 @@
 {
   "githubUsername": "abhisek247767",
   "promptUser": "abhisek",
-  "promptHost": "dev",
-  "asciiArt": [],
+  "promptHost": "roy",
+
   "systemInfo": [
-    { "label": "Role", "value": "Full-Stack Software Developer" },
-    { "label": "Languages.Programming", "value": "Java, TypeScript, JavaScript, Python" },
-    { "label": "Frameworks", "value": "Spring Boot, Node.js, React, Angular" },
-    { "label": "Exploring", "value": "Generative AI, Microservices" },
-    { "label": "Fun Fact", "value": "So friendly!!" }
+    {
+      "label": "Role",
+      "value": "Full-Stack Software Developer"
+    },
+    {
+      "label": "OS",
+      "value": "Windows 11, Ubuntu"
+    },
+    {
+      "label": "Experience",
+      "value": "Software Engineer"
+    },
+    {
+      "label": "IDE",
+      "value": "IntelliJ IDEA, VS Code, Eclipse"
+    },
+    {
+      "label": "Languages.Programming",
+      "value": "Java, TypeScript, JavaScript, Python"
+    },
+    {
+      "label": "Languages.Web",
+      "value": "HTML, CSS, Tailwind"
+    },
+    {
+      "label": "Languages.Real",
+      "value": "English, Bengali"
+    },
+    {
+      "label": "Frameworks",
+      "value": "Spring Boot, React, Angular, Node.js"
+    },
+    {
+      "label": "Hobbies.Software",
+      "value": "Open Source, Building Projects"
+    },
+    {
+      "label": "Hobbies.Other",
+      "value": "Photography, Music, Coffee"
+    }
   ],
+
   "contact": {
     "email": "abhisekroy169@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/royabhisek247767/",
-    "twitter": "https://x.com/abhisekroy169",
-    "website": "https://abhisek247767.github.io/AbhisekRoy-SDE/"
+    "linkedin": "royabhisek247767",
+    "twitter": "abhisekroy169",
+    "github": "abhisek247767",
+    "website": "abhisek247767.github.io/AbhisekRoy-SDE"
   }
 }
