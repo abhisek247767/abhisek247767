@@ -1,6 +1,13 @@
 <!-- ![Abhisek Roy](https://user-images.githubusercontent.com/69287212/196266752-97430395-831c-4588-abb1-0174c7bd4420.gif) -->
 
-![Abhisek Roy](https://github.com/user-attachments/assets/3bf2adf8-ea4f-4d9c-a6db-b01a1da41855)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-card/output/card-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-card/output/card-light.svg">
+    <img alt="Abhisek Roy profile card" src="./profile-card/output/card-light.svg">
+  </picture>
+</p>
+
 
 
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=salesp07.salesp07" />

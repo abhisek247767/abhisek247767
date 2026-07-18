@@ -1,0 +1,36 @@
+name: Update Profile Card
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+jobs:
+  update-profile-card:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate profile card
+        run: bun run image:create
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config --global user.email "abhisekroy169@gmail.com"
+          git config --global user.name "abhisek247767"
+          git add profile-card/output
+          git commit -m "Updated profile card on $(TZ=Asia/Kolkata date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git push origin main
