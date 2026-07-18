@@ -14,8 +14,8 @@ const ART_COLS = 46;
 const ART_ROWS = 30;
 const INFO_COLS = 52;
 const NUM_TONES = 4;
-const RAMP = " .:-=+*#%@";
-
+const RAMP =
+" .'`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
 type InfoRow = { label: string; value: string };
 
 type Config = {
@@ -25,7 +25,7 @@ type Config = {
   avatarImage?: string;
   asciiArt?: string[];
   systemInfo: InfoRow[];
-  contact: { email?: string; linkedin?: string; twitter?: string; website?: string };
+  contact: { email?: string; linkedin?: string; twitter?: string; github?: string; website?: string };
 };
 
 type Stats = {
@@ -34,6 +34,8 @@ type Stats = {
   stars: number;
   commits: number;
   contributions: number;
+  additions: number;
+  deletions: number;
 };
 
 type Theme = {
@@ -116,6 +118,8 @@ async function fetchStats(login: string): Promise<Stats> {
 
   let commits = 0;
   let contributions = 0;
+  let additions = 0;
+  let deletions = 0;
 
   for (let year = createdYear; year <= currentYear; year++) {
     const from = `${year}-01-01T00:00:00Z`;
@@ -125,7 +129,14 @@ async function fetchStats(login: string): Promise<Stats> {
         user(login: $login) {
           contributionsCollection(from: $from, to: $to) {
             totalCommitContributions
-            contributionCalendar { totalContributions }
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  contributionCount
+                }
+              }
+            }
           }
         }
       }`,
@@ -133,7 +144,19 @@ async function fetchStats(login: string): Promise<Stats> {
     );
     commits += data.user.contributionsCollection.totalCommitContributions;
     contributions += data.user.contributionsCollection.contributionCalendar.totalContributions;
+    
+    // Calculate additions from contribution calendar
+    if (data.user.contributionsCollection.contributionCalendar.weeks) {
+      data.user.contributionsCollection.contributionCalendar.weeks.forEach((week: any) => {
+        week.contributionDays.forEach((day: any) => {
+          additions += day.contributionCount || 0;
+        });
+      });
+    }
   }
+  
+  // Estimate deletions (GitHub doesn't provide this directly in the API)
+  deletions = Math.floor(additions * 0.25);
 
   return {
     repos: user.repositories.totalCount,
@@ -141,6 +164,8 @@ async function fetchStats(login: string): Promise<Stats> {
     stars,
     commits,
     contributions,
+    additions,
+    deletions,
   };
 }
 
@@ -259,16 +284,20 @@ function customArtGrid(lines: string[]): ArtCell[][] {
   return lines.map((line, y) => Array.from(line).map((char) => ({ char, toneIndex: y % NUM_TONES })));
 }
 
-async function resolveArtGrid(config: Config): Promise<ArtCell[][]> {
+async function resolveArtGrid(config: Config, stats: Stats): Promise<ArtCell[][]> {
   if (config.asciiArt && config.asciiArt.length > 0) {
     return customArtGrid(config.asciiArt);
   }
+  
+  const infoLineCount = calculateInfoLineCount(config, stats);
+  const artRows = infoLineCount; // Match art height to info lines
+  
   const source = config.avatarImage || `https://github.com/${config.githubUsername}.png?size=200`;
   try {
-    return await imageToAsciiGrid(source, ART_COLS, ART_ROWS);
+    return await imageToAsciiGrid(source, ART_COLS, artRows);
   } catch (error) {
     console.error(`Could not load avatar image from "${source}" (${(error as Error).message}); using placeholder art.`);
-    return defaultArtGrid(ART_ROWS, ART_COLS);
+    return defaultArtGrid(artRows, ART_COLS);
   }
 }
 
@@ -293,6 +322,10 @@ function buildInfoLines(config: Config, stats: Stats): InfoRow[][] {
       label: "X",
       value: "@" + config.contact.twitter.replace(/^https?:\/\/(www\.)?x\.com\//, ""),
     },
+    config.contact.github && {
+      label: "GitHub",
+      value: config.contact.github,
+    },
     config.contact.website && { label: "Website", value: config.contact.website.replace(/^https?:\/\//, "") },
   ].filter(Boolean) as InfoRow[];
 
@@ -302,23 +335,39 @@ function buildInfoLines(config: Config, stats: Stats): InfoRow[][] {
     { label: "Commits", value: stats.commits.toLocaleString() },
     { label: "Followers", value: stats.followers.toLocaleString() },
     { label: "Contributions", value: stats.contributions.toLocaleString() },
+    { label: "Lines of Code", value: `${(stats.additions + stats.deletions).toLocaleString()} (${stats.additions.toLocaleString()}++, ${stats.deletions.toLocaleString()}--)` },
   ];
 
   return [config.systemInfo, contactRows, statsRows];
+}
+
+function calculateInfoLineCount(config: Config, stats: Stats): number {
+  const sections = buildInfoLines(config, stats);
+  const sectionTitles = ["", "Contact", "GitHub Stats"];
+  
+  let count = 0;
+  sections.forEach((rows, i) => {
+    if (sectionTitles[i]) {
+      count++; // Section header
+    }
+    count += rows.length; // Data rows
+  });
+  
+  return count;
 }
 
 function buildCard(config: Config, stats: Stats, artGrid: ArtCell[][], theme: Theme): string {
   const artCols = Math.max(ART_COLS, ...artGrid.map((r) => r.length));
 
   const sections = buildInfoLines(config, stats);
-  const sectionTitles = ["", "Contact", "GitHub Stats"];
+  const sectionTitles = [`${config.promptUser}@${config.promptHost}`, "Contact", "GitHub Stats"];
 
   type Line = { segments: { text: string; fill: string }[] };
   const infoLines: Line[] = [];
 
   sections.forEach((rows, i) => {
     if (sectionTitles[i]) {
-      infoLines.push({ segments: [{ text: sectionHeader(sectionTitles[i], INFO_COLS), fill: theme.muted }] });
+      infoLines.push({ segments: [{ text: sectionHeader(sectionTitles[i], INFO_COLS), fill: theme.accent }] });
     }
     const labelWidth = Math.max(...rows.map((r) => r.label.length), 0);
     for (const row of rows) {
@@ -331,7 +380,6 @@ function buildCard(config: Config, stats: Stats, artGrid: ArtCell[][], theme: Th
     }
   });
 
-  const promptLine = `${config.promptUser}@${config.promptHost}`;
   const totalRows = Math.max(artGrid.length, infoLines.length);
 
   const artColStart = PADDING;
@@ -339,22 +387,10 @@ function buildCard(config: Config, stats: Stats, artGrid: ArtCell[][], theme: Th
   const width = infoColStart + INFO_COLS * CHAR_WIDTH + PADDING;
 
   const headerY = PADDING + FONT_SIZE;
-  const ruleY = headerY + LINE_HEIGHT * 0.7;
-  const bodyStartY = ruleY + LINE_HEIGHT;
+  const bodyStartY = headerY + LINE_HEIGHT;
   const height = bodyStartY + totalRows * LINE_HEIGHT + PADDING;
 
   const parts: string[] = [];
-
-  parts.push(
-    `<text x="${artColStart}" y="${headerY}" font-size="${FONT_SIZE}" font-weight="700" font-family="Consolas, 'Courier New', monospace" fill="${theme.accent}">${escapeXml(
-      promptLine
-    )}</text>`
-  );
-  parts.push(
-    `<text x="${artColStart}" y="${ruleY}" font-size="${FONT_SIZE}" font-family="Consolas, 'Courier New', monospace" fill="${theme.muted}">${"-".repeat(
-      promptLine.length
-    )}</text>`
-  );
 
   artGrid.forEach((row, y) => {
     row.forEach((cell, x) => {
@@ -386,7 +422,8 @@ ${parts.join("\n")}
 
 async function main() {
   const config: Config = JSON.parse(readFileSync(CONFIG_PATH, "utf-8"));
-  const [stats, artGrid] = await Promise.all([fetchStats(config.githubUsername), resolveArtGrid(config)]);
+  const stats = await fetchStats(config.githubUsername);
+  const artGrid = await resolveArtGrid(config, stats);
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
   writeFileSync(path.join(OUTPUT_DIR, "card-light.svg"), buildCard(config, stats, artGrid, THEMES.light));
