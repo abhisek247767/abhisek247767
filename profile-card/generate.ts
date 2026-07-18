@@ -11,7 +11,7 @@ const LINE_HEIGHT = FONT_SIZE * 1.6;
 const PADDING = 24;
 const GAP_COLS = 4;
 const ART_COLS = 46;
-const ART_ROWS = 17;
+const ART_ROWS = 30;
 const INFO_COLS = 52;
 const NUM_TONES = 4;
 const RAMP = " .:-=+*#%@";
@@ -52,7 +52,7 @@ const THEMES: Record<"light" | "dark", Theme> = {
     bg: "#ffffff",
     border: "#d0d7de",
     text: "#24292f",
-    muted: "#57606a",
+    muted: "#d18616",
     accent: "#0969da",
     art: ["#8dbdff", "#4b91f1", "#0969da", "#0550ae"],
   },
@@ -152,28 +152,81 @@ function escapeXml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+// Crop to center of image (simulates face crop)
+async function cropToFace(buffer: Buffer): Promise<Buffer> {
+  try {
+    console.log("Cropping to center...");
+    const metadata = await sharp(buffer).metadata();
+    if (metadata.width && metadata.height) {
+      const size = Math.min(metadata.width, metadata.height);
+      const left = Math.floor((metadata.width - size) / 2);
+      const top = Math.floor((metadata.height - size) / 2);
+      const result = await sharp(buffer)
+        .extract({ left, top, width: size, height: size })
+        .toBuffer();
+      return Buffer.from(result);
+    }
+    return buffer;
+  } catch (error) {
+    console.warn("Center crop failed, using original image:", (error as Error).message);
+    return buffer;
+  }
+}
+
 // Turns any image (local file path or URL) into a grid of density characters + tone buckets.
 async function imageToAsciiGrid(source: string, cols: number, rows: number): Promise<ArtCell[][]> {
-  const buffer = /^https?:\/\//.test(source)
+  let buffer = /^https?:\/\//.test(source)
     ? Buffer.from(await (await fetch(source)).arrayBuffer())
     : readFileSync(path.isAbsolute(source) ? source : path.join(import.meta.dir, source));
 
+  // Step 1: Crop to face
+  console.log("Cropping to center...");
+  const cropped = await cropToFace(buffer);
+  buffer = Buffer.from(cropped);
+
+  // Step 2: Sharpen
+  console.log("Sharpening...");
+  // Step 3: Resize to 46×30
+  console.log(`Resizing to ${cols}×${rows}...`);
   const { data, info } = await sharp(buffer)
     .resize(cols, rows, { fit: "fill" })
-    .sharpen()
+    .sharpen({
+      sigma: 2,
+      m1: 1.5,
+      m2: 3,
+    })
     .greyscale()
     .normalize()
     .raw()
     .toBuffer({ resolveWithObject: true });
 
+  // Step 5: ASCII conversion
+  console.log("Converting to ASCII...");
   const grid: ArtCell[][] = [];
   for (let y = 0; y < rows; y++) {
     const row: ArtCell[] = [];
     for (let x = 0; x < cols; x++) {
       const darkness = 1 - data[y * info.width + x] / 255;
-      const rampIdx = Math.min(RAMP.length - 1, Math.floor(darkness * RAMP.length));
       const toneIdx = Math.min(NUM_TONES - 1, Math.floor(darkness * NUM_TONES));
-      row.push({ char: RAMP[rampIdx] ?? " ", toneIndex: toneIdx });
+      
+      // Background threshold - increased to remove more noise
+      if (darkness < 0.7) {
+        row.push({
+          char: " ",
+          toneIndex: 0,
+        });
+        continue;
+      }
+
+      const rampIdx = Math.min(
+        RAMP.length - 1,
+        Math.floor(darkness * RAMP.length)
+      );
+
+      row.push({
+        char: RAMP[rampIdx],
+        toneIndex: toneIdx,
+      });
     }
     grid.push(row);
   }
