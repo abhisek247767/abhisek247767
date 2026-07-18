@@ -16,7 +16,7 @@ const INFO_COLS = 52;
 const NUM_TONES = 4;
 const RAMP =
 " .'`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-type InfoRow = { label: string; value: string };
+type InfoRow = { label: string; value: string | { text: string; fill: string }[] };
 
 type Config = {
   githubUsername: string;
@@ -45,6 +45,8 @@ type Theme = {
   muted: string;
   accent: string;
   art: string[];
+  green: string;
+  red: string;
 };
 
 type ArtCell = { char: string; toneIndex: number };
@@ -55,16 +57,20 @@ const THEMES: Record<"light" | "dark", Theme> = {
     border: "#d0d7de",
     text: "#24292f",
     muted: "#d18616",
-    accent: "#0969da",
-    art: ["#8dbdff", "#4b91f1", "#0969da", "#0550ae"],
+    accent: "#000000",
+    art: ["#000000", "#000000", "#000000", "#000000"],
+    green: "#1a7f37",
+    red: "#cf222e",
   },
   dark: {
     bg: "#0d1117",
     border: "#30363d",
     text: "#c9d1d9",
-    muted: "#8b949e",
-    accent: "#58a6ff",
-    art: ["#1f6feb", "#388bfd", "#58a6ff", "#a5d6ff"],
+    muted: "#d18616",
+    accent: "#ffffff",
+    art: ["#ffffff", "#ffffff", "#ffffff", "#ffffff"],
+    green: "#3fb950",
+    red: "#f85149",
   },
 };
 
@@ -334,8 +340,14 @@ function buildInfoLines(config: Config, stats: Stats): InfoRow[][] {
     { label: "Stars", value: stats.stars.toLocaleString() },
     { label: "Commits", value: stats.commits.toLocaleString() },
     { label: "Followers", value: stats.followers.toLocaleString() },
-    { label: "Contributions", value: stats.contributions.toLocaleString() },
-    { label: "Lines of Code", value: `${(stats.additions + stats.deletions).toLocaleString()} (${stats.additions.toLocaleString()}++, ${stats.deletions.toLocaleString()}--)` },
+    { label: "Lines of Code on GitHub", value: [
+      { text: (stats.additions + stats.deletions).toLocaleString(), fill: "text" },
+      { text: " (", fill: "text" },
+      { text: `${stats.additions.toLocaleString()}++`, fill: "green" },
+      { text: ", ", fill: "text" },
+      { text: `${stats.deletions.toLocaleString()}--`, fill: "red" },
+      { text: ")", fill: "text" },
+    ] as { text: string; fill: string }[] },
   ];
 
   return [config.systemInfo, contactRows, statsRows];
@@ -369,14 +381,53 @@ function buildCard(config: Config, stats: Stats, artGrid: ArtCell[][], theme: Th
     if (sectionTitles[i]) {
       infoLines.push({ segments: [{ text: sectionHeader(sectionTitles[i], INFO_COLS), fill: theme.accent }] });
     }
-    const labelWidth = Math.max(...rows.map((r) => r.label.length), 0);
-    for (const row of rows) {
-      infoLines.push({
-        segments: [
-          { text: padLabel(row.label, labelWidth), fill: theme.muted },
-          { text: row.value, fill: theme.text },
-        ],
+    
+    // GitHub Stats section: 2-column grid layout
+    if (sectionTitles[i] === "GitHub Stats") {
+      const pairs = [];
+      for (let j = 0; j < rows.length; j += 2) {
+        pairs.push([rows[j], rows[j + 1]]);
+      }
+      
+      const colWidth = INFO_COLS / 2;
+      pairs.forEach((pair) => {
+        const segments: { text: string; fill: string }[] = [];
+        pair.forEach((row, colIndex) => {
+          if (!row) return;
+          const valueSegments = typeof row.value === 'string' 
+            ? [{ text: row.value, fill: theme.text }]
+            : row.value.map((seg: { text: string; fill: string }) => ({
+                text: seg.text,
+                fill: seg.fill === 'text' ? theme.text : (seg.fill === 'green' ? theme.green : (seg.fill === 'red' ? theme.red : theme.text))
+              }));
+          
+          const x = colIndex * colWidth;
+          segments.push({ text: padLabel(row.label, 12), fill: theme.muted });
+          segments.push(...valueSegments);
+          if (colIndex === 0) {
+            segments.push({ text: " | ", fill: theme.muted });
+          }
+        });
+        infoLines.push({ segments });
       });
+    } else {
+      // Other sections: single column layout
+      const labelWidth = Math.max(...rows.map((r) => r.label.length), 0);
+      for (const row of rows) {
+        const valueSegments = typeof row.value === 'string' 
+          ? [{ text: row.value, fill: theme.text }]
+          : row.value.map((seg: { text: string; fill: string }) => ({
+              text: seg.text,
+              fill: seg.fill === 'text' ? theme.text : (seg.fill === 'green' ? theme.green : (seg.fill === 'red' ? theme.red : theme.text))
+            }));
+        
+        infoLines.push({
+          segments: [
+            { text: padLabel(row.label, labelWidth), fill: theme.muted },
+            ...valueSegments,
+          ],
+        });
+      }
     }
   });
 
