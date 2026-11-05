@@ -26,7 +26,7 @@
 
 - 💬 Ask me about **Java , SpringMVC , Springboot , NodeJS , React , Angular**
 
-- 🌱 I’m currently exploring **Generative AI and Microservices**
+- 🌱 I’m currently exploring **Agentic AI and n8n Automation**
 
 - 📫 How to reach me **abhisekroy169@gmail.com**
 
