@@ -29,8 +29,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.email "abhisekroy169@gmail.com"
-          git config --global user.name "abhisek247767"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add profile-card/output
           git commit -m "Updated profile card on $(TZ=Asia/Kolkata date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
           git push origin main
